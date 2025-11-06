@@ -1,181 +1,178 @@
-import { Checkbox } from '@/components/ui/checkbox';
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-orange-200 px-4 py-2 mb-6 rounded border border-orange-300">
-          <h1 className="text-base font-semibold text-gray-800">Все рейсы, которые были задержаны</h1>
+    <div className="min-h-screen bg-gray-50 p-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-8">
+          <h1 className="text-2xl font-bold text-gray-900">Вариант 3</h1>
         </div>
 
-        <div className="mb-8 bg-white p-8 rounded border border-gray-300 shadow-sm">
-          <div className="flex justify-start items-start gap-12 relative">
-            <div className="border-2 border-gray-600 bg-gray-100 p-4 rounded w-56 relative z-10">
-              <div className="font-semibold mb-3 flex items-center gap-2">
-                <span className="text-yellow-600">🔑</span>
-                <span className="text-sm">Рейсы</span>
-              </div>
-              <div className="space-y-1.5 text-xs text-gray-700">
-                <div className="flex items-center gap-2">
-                  <span className="text-yellow-600">🔑</span>
-                  <span>Код рейса</span>
-                </div>
-                <div className="pl-5">Дата и время вылета</div>
-                <div className="pl-5">Дата и время посадки</div>
-                <div className="pl-5">Вылет был не распис...</div>
-                <div className="pl-5">Код самолёта</div>
-                <div className="pl-5">Количество пасса...</div>
+        <div className="bg-white p-12 rounded border border-gray-300 shadow-sm mb-8">
+          <div className="relative" style={{ height: '400px' }}>
+            <div className="absolute left-1/2 top-0 -translate-x-1/2">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 1</span>
               </div>
             </div>
 
-            <div className="flex gap-12 items-start">
-              <div className="border-2 border-gray-600 bg-white p-4 rounded w-56 relative z-10">
-                <div className="font-semibold mb-3 flex items-center gap-2">
-                  <span className="text-yellow-600">🔑</span>
-                  <span className="text-sm">Аэропорты_1</span>
-                </div>
-                <div className="space-y-1.5 text-xs text-gray-700">
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-600">🔑</span>
-                    <span>Код аэропорта</span>
-                  </div>
-                  <div className="pl-5">Название</div>
-                  <div className="pl-5">Населённый пункт</div>
-                </div>
-              </div>
-
-              <div className="border-2 border-gray-600 bg-white p-4 rounded w-56 relative z-10">
-                <div className="font-semibold mb-3 flex items-center gap-2">
-                  <span className="text-yellow-600">🔑</span>
-                  <span className="text-sm">Аэропорты_2</span>
-                </div>
-                <div className="space-y-1.5 text-xs text-gray-700">
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-600">🔑</span>
-                    <span>Код аэропорта</span>
-                  </div>
-                  <div className="pl-5">Название</div>
-                  <div className="pl-5">Населённый пункт</div>
-                </div>
+            <div className="absolute left-0 top-32">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 2</span>
               </div>
             </div>
 
-            <svg className="absolute top-0 left-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
-              <defs>
-                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                  <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-                </marker>
-              </defs>
-              <path d="M 224 60 L 310 60" stroke="#333" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
-              <path d="M 224 80 L 520 60" stroke="#333" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+            <div className="absolute left-1/2 top-32 -translate-x-1/2">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 3</span>
+              </div>
+            </div>
+
+            <div className="absolute right-0 top-32">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 4</span>
+              </div>
+            </div>
+
+            <div className="absolute left-0 top-64">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 5</span>
+              </div>
+            </div>
+
+            <div className="absolute left-1/2 top-64 -translate-x-1/2">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 6</span>
+              </div>
+            </div>
+
+            <div className="absolute right-0 top-64">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Концентратор 7</span>
+              </div>
+            </div>
+
+            <div className="absolute left-16 bottom-0">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Узел 1</span>
+              </div>
+            </div>
+
+            <div className="absolute left-1/2 bottom-0 -translate-x-1/2">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Узел 2</span>
+              </div>
+            </div>
+
+            <div className="absolute right-16 bottom-0">
+              <div className="border-2 border-gray-800 bg-white px-6 py-3 rounded">
+                <span className="font-medium text-sm">Узел 3</span>
+              </div>
+            </div>
+
+            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+              <line x1="50%" y1="50" x2="15%" y2="150" stroke="#333" strokeWidth="2" />
+              <line x1="50%" y1="50" x2="50%" y2="150" stroke="#333" strokeWidth="2" />
+              <line x1="50%" y1="50" x2="85%" y2="150" stroke="#333" strokeWidth="2" />
+              
+              <line x1="15%" y1="180" x2="15%" y2="280" stroke="#333" strokeWidth="2" />
+              <line x1="50%" y1="180" x2="50%" y2="280" stroke="#333" strokeWidth="2" />
+              <line x1="85%" y1="180" x2="85%" y2="280" stroke="#333" strokeWidth="2" />
+              
+              <line x1="15%" y1="310" x2="20%" y2="380" stroke="#333" strokeWidth="2" />
+              <line x1="50%" y1="310" x2="50%" y2="380" stroke="#333" strokeWidth="2" />
+              <line x1="85%" y1="310" x2="80%" y2="380" stroke="#333" strokeWidth="2" />
             </svg>
+
+            <div className="absolute left-8 top-24 text-sm text-gray-600">Сегмент 1</div>
+            <div className="absolute left-1/2 top-24 -translate-x-1/2 text-sm text-gray-600">Сегмент 2</div>
+            <div className="absolute right-8 top-24 text-sm text-gray-600">Сегмент 3</div>
+            
+            <div className="absolute left-8 top-56 text-sm text-gray-600">Сегмент 4</div>
+            <div className="absolute left-1/2 top-56 -translate-x-1/2 text-sm text-gray-600">Сегмент 5</div>
+            <div className="absolute right-8 top-56 text-sm text-gray-600">Сегмент 6</div>
+            
+            <div className="absolute left-20 top-88 text-sm text-gray-600">Сегмент 7</div>
+            <div className="absolute left-1/2 top-88 -translate-x-1/2 text-sm text-gray-600">Сегмент 8</div>
+            <div className="absolute right-20 top-88 text-sm text-gray-600">Сегмент 9</div>
           </div>
         </div>
 
         <div className="bg-white rounded border border-gray-300 shadow-sm overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-xs border-collapse">
-              <thead>
-                <tr className="bg-gray-200">
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Поле:</th>
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">
-                    <select className="border border-gray-400 px-2 py-1 rounded text-xs w-full bg-white">
-                      <option>Код рейса</option>
-                    </select>
-                  </th>
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Дата и время вылета</th>
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Дата и время посадки</th>
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Аэропорт вылета: Назв.</th>
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Аэропорт посадки: Наз</th>
-                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Бортовой номер</th>
-                  <th className="px-3 py-2.5 text-left font-semibold">Вылет был не расписан</th>
-                </tr>
-                <tr className="border-t-2 border-gray-800">
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Имя таблицы:</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Рейсы</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Рейсы</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Рейсы</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Аэропорты_1</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Аэропорты_2</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Самолёты</th>
-                  <th className="px-3 py-2 text-left bg-white font-normal">Рейсы</th>
-                </tr>
-                <tr className="border-t border-gray-300">
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Сортировка:</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">по возрастанию</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">по убыванию</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left bg-white font-normal"></th>
-                </tr>
-                <tr className="border-t border-gray-300">
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Вывод на экран:</th>
-                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox defaultChecked />
-                    </div>
-                  </th>
-                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox defaultChecked />
-                    </div>
-                  </th>
-                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox defaultChecked />
-                    </div>
-                  </th>
-                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox defaultChecked />
-                    </div>
-                  </th>
-                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox defaultChecked />
-                    </div>
-                  </th>
-                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox defaultChecked />
-                    </div>
-                  </th>
-                  <th className="px-3 py-2 text-center bg-white">
-                    <div className="flex justify-center">
-                      <Checkbox />
-                    </div>
-                  </th>
-                </tr>
-                <tr className="border-t border-gray-300">
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Условие отбора:</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left bg-white font-normal"></th>
-                </tr>
-                <tr className="border-t border-gray-300">
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">или:</th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
-                  <th className="px-3 py-2 text-left bg-white font-normal">Ложь</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t-2 border-gray-800">
-                  <td className="px-3 py-12 bg-white" colSpan={8}></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="px-4 py-3 text-left border-r border-gray-400 font-semibold"></th>
+                <th className="px-4 py-3 text-center border-r border-gray-400 font-semibold">10 Base-FB</th>
+                <th className="px-4 py-3 text-center border-r border-gray-400 font-semibold">10 Base-FL</th>
+                <th className="px-4 py-3 text-center border-r border-gray-400 font-semibold">10 Base-T</th>
+                <th className="px-4 py-3 text-center font-semibold">Длина, м</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 1</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center">1000</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 2</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center">200</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 3</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center">200</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 4</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center">400</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 5</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center">300</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 6</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center">200</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 7</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center">100</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 8</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center">100</td>
+              </tr>
+              <tr className="border-t border-gray-300">
+                <td className="px-4 py-2.5 border-r border-gray-300 font-medium bg-gray-50">Сегмент 9</td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300"></td>
+                <td className="px-4 py-2.5 text-center border-r border-gray-300">+</td>
+                <td className="px-4 py-2.5 text-center">40</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
