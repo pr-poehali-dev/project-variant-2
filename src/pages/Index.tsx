@@ -1,8 +1,38 @@
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+
 const Index = () => {
+  const [variant, setVariant] = useState(2);
+
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">Вариант 2</h1>
+        {/* Кнопки переключения вариантов */}
+        <div className="flex justify-center gap-4 mb-8">
+          <Button 
+            onClick={() => setVariant(1)} 
+            variant={variant === 1 ? "default" : "outline"}
+            className="px-8"
+          >
+            Вариант 1
+          </Button>
+          <Button 
+            onClick={() => setVariant(2)} 
+            variant={variant === 2 ? "default" : "outline"}
+            className="px-8"
+          >
+            Вариант 2
+          </Button>
+          <Button 
+            onClick={() => setVariant(3)} 
+            variant={variant === 3 ? "default" : "outline"}
+            className="px-8"
+          >
+            Вариант 3
+          </Button>
+        </div>
+
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">Вариант {variant}</h1>
         
         {/* Схема */}
         <div className="mb-12">
