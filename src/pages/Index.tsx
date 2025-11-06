@@ -1,174 +1,181 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-
-const variantData = {
-  1: {
-    segments: [
-      { name: 'Сегмент 1', fb: '+', fl: '', t: '', length: '1000' },
-      { name: 'Сегмент 2', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 3', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 4', fb: '', fl: '+', t: '', length: '400' },
-      { name: 'Сегмент 5', fb: '+', fl: '', t: '', length: '300' },
-      { name: 'Сегмент 6', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 7', fb: '', fl: '', t: '+', length: '100' },
-      { name: 'Сегмент 8', fb: '', fl: '', t: '+', length: '100' },
-      { name: 'Сегмент 9', fb: '', fl: '', t: '+', length: '40' }
-    ]
-  },
-  2: {
-    segments: [
-      { name: 'Сегмент 1', fb: '+', fl: '', t: '', length: '1000' },
-      { name: 'Сегмент 2', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 3', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 4', fb: '', fl: '+', t: '', length: '400' },
-      { name: 'Сегмент 5', fb: '+', fl: '', t: '', length: '300' },
-      { name: 'Сегмент 6', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 7', fb: '', fl: '', t: '+', length: '100' },
-      { name: 'Сегмент 8', fb: '', fl: '', t: '+', length: '100' },
-      { name: 'Сегмент 9', fb: '', fl: '', t: '+', length: '40' }
-    ]
-  },
-  3: {
-    segments: [
-      { name: 'Сегмент 1', fb: '+', fl: '', t: '', length: '1000' },
-      { name: 'Сегмент 2', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 3', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 4', fb: '', fl: '+', t: '', length: '400' },
-      { name: 'Сегмент 5', fb: '+', fl: '', t: '', length: '300' },
-      { name: 'Сегмент 6', fb: '', fl: '+', t: '', length: '200' },
-      { name: 'Сегмент 7', fb: '', fl: '', t: '+', length: '100' },
-      { name: 'Сегмент 8', fb: '', fl: '', t: '+', length: '100' },
-      { name: 'Сегмент 9', fb: '', fl: '', t: '+', length: '40' }
-    ]
-  }
-};
+import { Checkbox } from '@/components/ui/checkbox';
 
 const Index = () => {
-  const [variant, setVariant] = useState(2);
-  const currentData = variantData[variant as keyof typeof variantData];
-
   return (
-    <div className="min-h-screen bg-white p-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex justify-center gap-4 mb-8">
-          <Button 
-            onClick={() => setVariant(1)} 
-            variant={variant === 1 ? "default" : "outline"}
-            className="px-8"
-          >
-            Вариант 1
-          </Button>
-          <Button 
-            onClick={() => setVariant(2)} 
-            variant={variant === 2 ? "default" : "outline"}
-            className="px-8"
-          >
-            Вариант 2
-          </Button>
-          <Button 
-            onClick={() => setVariant(3)} 
-            variant={variant === 3 ? "default" : "outline"}
-            className="px-8"
-          >
-            Вариант 3
-          </Button>
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-orange-200 px-4 py-2 mb-6 rounded border border-orange-300">
+          <h1 className="text-base font-semibold text-gray-800">Все рейсы, которые были задержаны</h1>
         </div>
 
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">Вариант {variant}</h1>
-        
-        <div className="mb-12">
-          <div className="flex flex-col items-center">
-            <div className="border-2 border-gray-800 px-6 py-3 mb-8 bg-white">
-              <span className="font-semibold">Концентратор 1</span>
+        <div className="mb-8 bg-white p-8 rounded border border-gray-300 shadow-sm">
+          <div className="flex justify-start items-start gap-12 relative">
+            <div className="border-2 border-gray-600 bg-gray-100 p-4 rounded w-56 relative z-10">
+              <div className="font-semibold mb-3 flex items-center gap-2">
+                <span className="text-yellow-600">🔑</span>
+                <span className="text-sm">Рейсы</span>
+              </div>
+              <div className="space-y-1.5 text-xs text-gray-700">
+                <div className="flex items-center gap-2">
+                  <span className="text-yellow-600">🔑</span>
+                  <span>Код рейса</span>
+                </div>
+                <div className="pl-5">Дата и время вылета</div>
+                <div className="pl-5">Дата и время посадки</div>
+                <div className="pl-5">Вылет был не распис...</div>
+                <div className="pl-5">Код самолёта</div>
+                <div className="pl-5">Количество пасса...</div>
+              </div>
             </div>
 
-            <div className="flex justify-between w-full max-w-5xl relative mb-8">
-              <div className="flex flex-col items-center w-1/3">
-                <div className="h-16 w-0.5 bg-gray-800 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 1</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Концентратор 2</span>
+            <div className="flex gap-12 items-start">
+              <div className="border-2 border-gray-600 bg-white p-4 rounded w-56 relative z-10">
+                <div className="font-semibold mb-3 flex items-center gap-2">
+                  <span className="text-yellow-600">🔑</span>
+                  <span className="text-sm">Аэропорты_1</span>
                 </div>
-                
-                <div className="h-16 w-0.5 bg-gray-800 mt-2 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 4</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Концентратор 5</span>
-                </div>
-
-                <div className="h-16 w-0.5 bg-gray-800 mt-2 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 7</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Узел 1</span>
+                <div className="space-y-1.5 text-xs text-gray-700">
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-600">🔑</span>
+                    <span>Код аэропорта</span>
+                  </div>
+                  <div className="pl-5">Название</div>
+                  <div className="pl-5">Населённый пункт</div>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center w-1/3">
-                <div className="h-16 w-0.5 bg-gray-800 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 2</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Концентратор 3</span>
+              <div className="border-2 border-gray-600 bg-white p-4 rounded w-56 relative z-10">
+                <div className="font-semibold mb-3 flex items-center gap-2">
+                  <span className="text-yellow-600">🔑</span>
+                  <span className="text-sm">Аэропорты_2</span>
                 </div>
-
-                <div className="h-16 w-0.5 bg-gray-800 mt-2 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 5</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Концентратор 6</span>
-                </div>
-
-                <div className="h-16 w-0.5 bg-gray-800 mt-2 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 8</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Узел 2</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center w-1/3">
-                <div className="h-16 w-0.5 bg-gray-800 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 3</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Концентратор 4</span>
-                </div>
-
-                <div className="h-16 w-0.5 bg-gray-800 mt-2 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 6</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Концентратор 7</span>
-                </div>
-
-                <div className="h-16 w-0.5 bg-gray-800 mt-2 mb-2"></div>
-                <span className="text-sm mb-2 text-gray-600">Сегмент 9</span>
-                <div className="border-2 border-gray-800 px-6 py-3 bg-white">
-                  <span className="font-semibold">Узел 3</span>
+                <div className="space-y-1.5 text-xs text-gray-700">
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-600">🔑</span>
+                    <span>Код аэропорта</span>
+                  </div>
+                  <div className="pl-5">Название</div>
+                  <div className="pl-5">Населённый пункт</div>
                 </div>
               </div>
             </div>
+
+            <svg className="absolute top-0 left-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+                </marker>
+              </defs>
+              <path d="M 224 60 L 310 60" stroke="#333" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+              <path d="M 224 80 L 520 60" stroke="#333" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+            </svg>
           </div>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse border-2 border-gray-800">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border-2 border-gray-800 px-4 py-3 text-left font-semibold"></th>
-                <th className="border-2 border-gray-800 px-4 py-3 text-center font-semibold">10 Base-FB</th>
-                <th className="border-2 border-gray-800 px-4 py-3 text-center font-semibold">10 Base-FL</th>
-                <th className="border-2 border-gray-800 px-4 py-3 text-center font-semibold">10 Base-T</th>
-                <th className="border-2 border-gray-800 px-4 py-3 text-center font-semibold">Длина, м</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentData.segments.map((segment, index) => (
-                <tr key={index} className={index % 2 === 1 ? "bg-gray-50" : ""}>
-                  <td className="border-2 border-gray-800 px-4 py-3 font-medium">{segment.name}</td>
-                  <td className="border-2 border-gray-800 px-4 py-3 text-center">{segment.fb}</td>
-                  <td className="border-2 border-gray-800 px-4 py-3 text-center">{segment.fl}</td>
-                  <td className="border-2 border-gray-800 px-4 py-3 text-center">{segment.t}</td>
-                  <td className="border-2 border-gray-800 px-4 py-3 text-center">{segment.length}</td>
+        <div className="bg-white rounded border border-gray-300 shadow-sm overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs border-collapse">
+              <thead>
+                <tr className="bg-gray-200">
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Поле:</th>
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">
+                    <select className="border border-gray-400 px-2 py-1 rounded text-xs w-full bg-white">
+                      <option>Код рейса</option>
+                    </select>
+                  </th>
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Дата и время вылета</th>
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Дата и время посадки</th>
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Аэропорт вылета: Назв.</th>
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Аэропорт посадки: Наз</th>
+                  <th className="px-3 py-2.5 text-left border-r border-gray-400 font-semibold">Бортовой номер</th>
+                  <th className="px-3 py-2.5 text-left font-semibold">Вылет был не расписан</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+                <tr className="border-t-2 border-gray-800">
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Имя таблицы:</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Рейсы</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Рейсы</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Рейсы</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Аэропорты_1</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Аэропорты_2</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">Самолёты</th>
+                  <th className="px-3 py-2 text-left bg-white font-normal">Рейсы</th>
+                </tr>
+                <tr className="border-t border-gray-300">
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Сортировка:</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">по возрастанию</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal">по убыванию</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left bg-white font-normal"></th>
+                </tr>
+                <tr className="border-t border-gray-300">
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Вывод на экран:</th>
+                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox defaultChecked />
+                    </div>
+                  </th>
+                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox defaultChecked />
+                    </div>
+                  </th>
+                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox defaultChecked />
+                    </div>
+                  </th>
+                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox defaultChecked />
+                    </div>
+                  </th>
+                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox defaultChecked />
+                    </div>
+                  </th>
+                  <th className="px-3 py-2 text-center border-r border-gray-300 bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox defaultChecked />
+                    </div>
+                  </th>
+                  <th className="px-3 py-2 text-center bg-white">
+                    <div className="flex justify-center">
+                      <Checkbox />
+                    </div>
+                  </th>
+                </tr>
+                <tr className="border-t border-gray-300">
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">Условие отбора:</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left bg-white font-normal"></th>
+                </tr>
+                <tr className="border-t border-gray-300">
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-gray-100 font-semibold">или:</th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left border-r border-gray-300 bg-white font-normal"></th>
+                  <th className="px-3 py-2 text-left bg-white font-normal">Ложь</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-t-2 border-gray-800">
+                  <td className="px-3 py-12 bg-white" colSpan={8}></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
